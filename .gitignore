@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# VS Code local settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Power BI temporary files
+*.pbitmp
+
+# Original Kaggle datasets
+# Download separately from the source linked in README
+data/raw/
+
+# Large historical US county-level dataset
+usa_county_wise.csv
