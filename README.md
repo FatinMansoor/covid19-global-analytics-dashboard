@@ -1,6 +1,6 @@
 # COVID-19 Global Analytics Dashboard
 
-*Python | Pandas | Power BI | DAX | Data Visualization
+*Python | Pandas | Power BI | DAX | Data Visualization*
 
 ## Project Overview
 
@@ -130,20 +130,55 @@ COVID-19 Dashboard/
 
 ## How to Run
 
-1. Clone or download this repository.
-2. Install the required Python libraries:
+### 1. Clone the Repository
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/FatinMansoor/covid19-global-analytics-dashboard.git
+cd covid19-global-analytics-dashboard
+```
 
-3. Open `notebooks/01_data_cleaning.ipynb` in VS Code or Jupyter Notebook and run all cells.
-4. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells.
-5. Open `dashboard/COVID-19_Global_Analytics.pbix` using Power BI Desktop.
+### 2. Install Dependencies
 
-**Note:** The notebooks expect the project's existing folder structure. The Power BI report may require updating the CSV source path to data/processed/covid_cleaned.csv when opened on another computer.
+```bash
+pip install -r requirements.txt
+```
 
-The Power BI report may require updating its local CSV source path when opened on another computer.
+### 3. Download the Dataset
+
+Download the original dataset from [Kaggle — COVID-19 Dataset](https://www.kaggle.com/datasets/imdevskp/corona-virus-report).
+
+Create the `data/raw/` and `data/processed/` folders if they do not exist.
+
+Extract these six CSV files directly into `data/raw/`:
+
+- `country_wise_latest.csv`
+- `covid_19_clean_complete.csv`
+- `day_wise.csv`
+- `full_grouped.csv`
+- `usa_county_wise.csv`
+- `worldometer_data.csv`
+
+The raw CSV files are not included in this GitHub repository and must be downloaded separately.
+
+### 4. Run Data Cleaning
+
+Open `notebooks/01_data_cleaning.ipynb` using VS Code or Jupyter Notebook.
+
+Select **Restart & Run All** to generate:
+
+`data/processed/covid_cleaned.csv`
+
+### 5. Run Exploratory Data Analysis
+
+Open `notebooks/02_exploratory_analysis.ipynb` and run all cells to reproduce the analyses, statistics, and visualizations.
+
+### 6. Open the Power BI Dashboard
+
+Open `dashboard/COVID-19_Global_Analytics.pbix` in Power BI Desktop.
+
+The report contains two pages: **Global Overview** and **Country Analysis**.
+
+**Note:** The notebooks expect the existing project folder structure and may require the working directory to be set to `notebooks/`. Power BI may require updating its CSV source path when refreshing the report on another computer.
 
 ## Limitations
 
